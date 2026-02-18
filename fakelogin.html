@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Selector</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+    <div class="card w-full max-w-md bg-base-100 shadow-xl">
+        <div class="card-body">
+            <h2 class="card-title text-primary mb-4">Location Selector</h2>
+            
+            <div class="form-control w-full">
+                <label class="label"><span class="label-text font-bold">Province</span></label>
+                <select id="province-select" class="select select-bordered w-full">
+                    <option value="">Select Province</option>
+                </select>
+            </div>
+
+            <div class="form-control w-full mt-2">
+                <label class="label"><span class="label-text font-bold">District</span></label>
+                <select id="district-select" class="select select-bordered w-full" disabled>
+                    <option value="">Select District</option>
+                </select>
+            </div>
+
+            <div class="form-control w-full mt-2">
+                <label class="label"><span class="label-text font-bold">Commune</span></label>
+                <select id="commune-select" class="select select-bordered w-full" disabled>
+                    <option value="">Select Commune</option>
+                </select>
+            </div>
+
+            <div class="form-control w-full mt-2">
+                <label class="label"><span class="label-text font-bold">Village</span></label>
+                <select id="village-select" class="select select-bordered w-full" disabled>
+                    <option value="">Select Village</option>
+                </select>
+            </div>
+
+            <div class="card-actions justify-end mt-6">
+                <button id="submit-btn" class="btn btn-primary">Submit</button>
+                <button id="reset-btn" class="btn btn-ghost bg-gray-200">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="fakelogin.js"></script>
+</body>
+</html>

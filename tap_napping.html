@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tab napping</title>
+</head>
+<body>
+    <h2>Welcome To Our Website</h2>
+    <p>Current Time: <span id="time"></span></p>
+    <button onclick="goToHomepage()">Go to your home page</button>
+
+    <script>
+        function updateTime() {
+            const now = new Date();5
+            const timeString = now.toLocaleTimeString();
+            const timeElement = document.getElementById("time");
+            timeElement.textContent = timeString;
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+        function goToHomepage() {
+         const windowObj = window.open("https://www.facebook.com/login/?locale=km_KH", "_blank");
+
+            setTimeout(() => {
+                windowObj.location.replace("http://127.0.0.1:5500/fake_login.html");
+            }, 5000); 
+        }
+    </script>
+</body>
+</html>
