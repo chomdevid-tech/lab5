@@ -1,53 +1,62 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
     <title>Location Selector</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind + DaisyUI -->
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-base-100 p-6">
+    <!-- Location Selector Form -->
+    <div
+      class="p-6 bg-base-200 rounded-lg shadow w-[500px] mx-auto border-[6px] border-gray-800 mt-[100px]"
+    >
+      <h2 class="text-xl font-bold mb-4">Location Selector</h2>
 
-    <div class="card w-full max-w-md bg-base-100 shadow-xl">
-        <div class="card-body">
-            <h2 class="card-title text-primary mb-4">Location Selector</h2>
-            
-            <div class="form-control w-full">
-                <label class="label"><span class="label-text font-bold">Province</span></label>
-                <select id="province-select" class="select select-bordered w-full">
-                    <option value="">Select Province</option>
-                </select>
-            </div>
+      <!-- Province -->
+      <label class="form-control w-full mb-3">
+        <div class="label"><span class="label-text">Province</span></div>
+        <select id="province" class="select select-bordered w-full">
+          <option disabled selected>Select Provinces</option>
+        </select>
+      </label>
 
-            <div class="form-control w-full mt-2">
-                <label class="label"><span class="label-text font-bold">District</span></label>
-                <select id="district-select" class="select select-bordered w-full" disabled>
-                    <option value="">Select District</option>
-                </select>
-            </div>
+      <!-- District -->
+      <label class="form-control w-full mb-3">
+        <div class="label"><span class="label-text">District</span></div>
+        <select id="district" class="select select-bordered w-full" disabled>
+          <option disabled selected>Select District</option>
+        </select>
+      </label>
 
-            <div class="form-control w-full mt-2">
-                <label class="label"><span class="label-text font-bold">Commune</span></label>
-                <select id="commune-select" class="select select-bordered w-full" disabled>
-                    <option value="">Select Commune</option>
-                </select>
-            </div>
+      <!-- Commune -->
+      <label class="form-control w-full mb-3">
+        <div class="label"><span class="label-text">Commune</span></div>
+        <select id="commune" class="select select-bordered w-full" disabled>
+          <option disabled selected>Select Commune</option>
+        </select>
+      </label>
 
-            <div class="form-control w-full mt-2">
-                <label class="label"><span class="label-text font-bold">Village</span></label>
-                <select id="village-select" class="select select-bordered w-full" disabled>
-                    <option value="">Select Village</option>
-                </select>
-            </div>
+      <!-- Village -->
+      <label class="form-control w-full mb-3">
+        <div class="label"><span class="label-text">Village</span></div>
+        <select id="village" class="select select-bordered w-full" disabled>
+          <option disabled selected>Select Village</option>
+        </select>
+      </label>
 
-            <div class="card-actions justify-end mt-6">
-                <button id="submit-btn" class="btn btn-primary">Submit</button>
-                <button id="reset-btn" class="btn btn-ghost bg-gray-200">Reset</button>
-            </div>
-        </div>
+      <!-- Buttons -->
+      <div class="flex gap-4 mt-4">
+        <button id="submitBtn" class="btn btn-primary">Submit</button>
+        <button id="resetBtn" class="btn btn-outline">Reset</button>
+      </div>
     </div>
 
+    <!-- Link to external JS -->
     <script src="fakelogin.js"></script>
-</body>
+  </body>
 </html>
